@@ -3,6 +3,6 @@
 set -euo pipefail
 
 for i in *.md; do
-    target=`basename -s md "$i"`
-    ebook-convert "$i" "$target"mobi;
+    target=`basename -s .md "$i"`
+    ebook-convert "$i" "$target".mobi --title "$target"
 done
